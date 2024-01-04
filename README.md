@@ -1,1 +1,2 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+以前学習した内容に加えてMUIを学習し、自己紹介ページを作成していきたいと思います
+

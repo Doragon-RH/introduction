@@ -15,6 +15,8 @@ body {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
+  line-height: 1rem;
+  font-size: 18px;
 }
 
 a {
@@ -24,6 +26,9 @@ a {
 
 * {
   box-sizing: border-box;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 img {
