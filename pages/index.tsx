@@ -21,8 +21,13 @@ export default function Home() {
         </p>
       </section>
       <h3>
-        <Link href="/other/can">
-          what can I do?<br />
+        <Link href="/other/learn">
+          what I learned?<br />
+        <br />
+          Read More
+        </Link><br /><br /><br />
+        <Link href="/other/did">
+          what I did?<br />
         <br />
           Read More
         </Link>

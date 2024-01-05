@@ -3,15 +3,15 @@ import Head from 'next/head';
 import Script from 'next/script';
 import Layout from '../../components/layout';
 
-export default function Can() {
+export default function Learn() {
   return (
     <>
       <Layout>
         <Head>
-          <title>what can I do?</title>
+          <title>what I learned?</title>
         </Head>
         
-        <h1>what can I do?</h1>
+        <h1>what I learned?</h1>
         <br />
         <h2>
             <a>Python</a>
