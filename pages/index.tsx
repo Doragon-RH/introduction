@@ -7,16 +7,19 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import Button from '@mui/material/Button';
 
 const name = 'Dragon-RH';
 
 export default function Home() {
   return (
     <>
+    
       <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <Button variant="contained">Hello world</Button>
       <section className={utilStyles.headingMd}>
         <p>Hello!</p>
         <p>
@@ -29,12 +32,15 @@ export default function Home() {
         <br />
           Read More
         </Link><br /><br /><br />
-        <Link href="/other/did">
-          what I did?<br />
-        <br />
-          Read More
-        </Link>
+        
       </h3>
+      <Button variant="contained">
+        <Link href="/other/did">
+            what I did?       <br />
+            Read More
+        </Link>
+      </Button>
+      <Button variant="contained">Hello world</Button>
       </Layout>
       
              <footer>
@@ -47,7 +53,16 @@ export default function Home() {
                 <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
               </a>
             </footer>
-            
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+            />
 
             <style jsx>{`
               main {
