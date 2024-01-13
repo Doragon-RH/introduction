@@ -23,7 +23,8 @@ export default function Did() {
                     <a>2023/04 ～ 2023/08</a>
                 </h2>
                 <p>
-                    I participated in the hackathon and I learned Python, git, docker, MySQL!<br />
+                    I participated in the hackathon and I learned Python, git, docker, MySQL!<br /><br />
+                    サポーターズ主催のハッカソン出場！
                 </p>
                 <h2>
                     <a>2023/07 ～ 2023/11</a>

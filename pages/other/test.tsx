@@ -5,10 +5,16 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Button from '@mui/material/Button';
 import * as React from 'react';
+import Demo from "../testcomponent/demo";
+import Range from "../testcomponent/range";
+
+
 export default function () {
     return (
         <>
-            <Button variant="contained">Hello world</Button>
+            <Button variant="contained">Hello world</Button>  {/* ボタンについて */}
+            <Demo />
+            <Range />
             <link
               rel="stylesheet"
               href="https://fonts.googleapis.com/icon?family=Material+Icons"
