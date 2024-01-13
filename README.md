@@ -25,3 +25,7 @@ ReactとReact-domもピアー依存関係
 アイコンコンポーネント追加
 
 npm install @mui/icons-material
+
+headエレメントに追加
+
+<meta name="viewport" content="initial-scale=1, width=device-width" />

@@ -3,11 +3,6 @@ import Layout,{siteTitle} from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import Button from '@mui/material/Button';
 
 const name = 'Dragon-RH';
 
@@ -19,7 +14,7 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <Button variant="contained">Hello world</Button>
+      
       <section className={utilStyles.headingMd}>
         <p>Hello!</p>
         <p>
@@ -28,19 +23,17 @@ export default function Home() {
       </section>
       <h3>
         <Link href="/other/learn">
-          what I learned?<br />
-        <br />
+          what I learned?<br /><br />
           Read More
-        </Link><br /><br /><br />
-        
+        </Link><br /><br />
       </h3>
-      <Button variant="contained">
+      <h3>
         <Link href="/other/did">
-            what I did?       <br />
+            what I did?<br /><br />
             Read More
         </Link>
-      </Button>
-      <Button variant="contained">Hello world</Button>
+      </h3>
+        
       </Layout>
       
              <footer>
@@ -53,16 +46,7 @@ export default function Home() {
                 <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
               </a>
             </footer>
-            <link
-              rel="stylesheet"
-              href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            />
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-            <link
-              rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
-            />
+            
 
             <style jsx>{`
               main {
