@@ -5,8 +5,7 @@ import Layout from '../../components/layout';
 
 export default function Learn() {
   return (
-    <>
-      <Layout>
+      <Layout home>
         <Head>
           <title>what I learned?</title>
         </Head>
@@ -59,6 +58,5 @@ export default function Learn() {
         </p>
         
         </Layout>
-    </>
     );
 }

@@ -5,8 +5,7 @@ import Layout from '../../components/layout';
 
 export default function Did() {
     return (
-        <>
-            <Layout>
+            <Layout home>
                 <Head>
                 <title>What I did</title>
                 </Head>
@@ -45,6 +44,5 @@ export default function Did() {
                     AtCoderコンテスト参加<br />
                 </p>
             </Layout>
-        </>
     );
 }
