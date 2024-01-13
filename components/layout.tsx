@@ -58,7 +58,7 @@ export default function Layout({ children, home }) {
           )}
         </header>
         <main>{children}</main>
-        {!home && (
+        {!home && (　//0,null,false,undefined,NaN,""はfalseとして扱われる
           <div className={styles.backToHome}>
             <Link href="/">← Back to home</Link>
           </div>
