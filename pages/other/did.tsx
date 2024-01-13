@@ -5,7 +5,7 @@ import Layout from '../../components/layout';
 
 export default function Did() {
     return (
-            <Layout home>
+            <Layout home ={0}>
                 <Head>
                 <title>What I did</title>
                 </Head>

@@ -5,7 +5,7 @@ import Layout from '../../components/layout';
 
 export default function Learn() {
   return (
-      <Layout home>
+      <Layout home={0}>
         <Head>
           <title>what I learned?</title>
         </Head>
