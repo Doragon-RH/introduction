@@ -44,7 +44,7 @@ export default function Learn() {
               <a href="https://github.com/Doragon-RH/learnReact">
                   This is what I learned about React!
               </a><br /><br />
-              <a href="">
+              <a href="https://introduction-ctfzhuho4-honbinryus-projects.vercel.app/">
                   This is what I learned about Next.js!
               </a><br /><br />
               And this page is what I learning now! maybe...
