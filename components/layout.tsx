@@ -29,10 +29,10 @@ export default function Layout({ children, home }) {
             <>
               <Image
                 priority
-                src="/images/profile.jpg"
+                src="/images/profile.JPG"
                 className={utilStyles.borderCircle}
-                height={90}
-                width={120}
+                height={100}
+                width={100}
                 alt=""
               />
               <h1 className={utilStyles.heading2Xl}>{name}</h1>
@@ -42,9 +42,9 @@ export default function Layout({ children, home }) {
               <Link href="/">
                 <Image
                   priority
-                  src="/images/profile.jpg"
+                  src="/images/profile.JPG"
                   className={utilStyles.borderCircle}
-                  height={60}
+                  height={80}
                   width={80}
                   alt=""
                 />
@@ -58,7 +58,7 @@ export default function Layout({ children, home }) {
           )}
         </header>
         <main>{children}</main>
-        {!home && (　//0,null,false,undefined,NaN,""はfalseとして扱われる
+        {!home && ( //0,null,false,undefined,NaN,""はfalseとして扱われる
           <div className={styles.backToHome}>
             <Link href="/">← Back to home</Link>
           </div>
