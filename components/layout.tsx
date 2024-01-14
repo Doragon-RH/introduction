@@ -31,7 +31,7 @@ export default function Layout({ children, home }) {
             <>
               <Avatar
               alt=""
-                src="/images/profile.JPG"
+                src="/images/profile.jpg"
                 sx={{ width: 200, height: 200 }}
               />
               <h1 className={utilStyles.heading2Xl}>{name}</h1>
@@ -41,7 +41,7 @@ export default function Layout({ children, home }) {
               <Link href="/">
               <Avatar
               alt=""
-                src="/images/profile.JPG"
+                src="/images/profile.jpg"
                 sx={{ width: 150, height: 150 }}
               />
               </Link>
