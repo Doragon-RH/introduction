@@ -3,6 +3,8 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
 
 const name = 'Dragon-RH';
 export const siteTitle = 'introduction';
@@ -27,27 +29,21 @@ export default function Layout({ children, home }) {
         <header className={styles.header}>
           {home ? (
             <>
-              <Image
-                priority
+              <Avatar
+              alt=""
                 src="/images/profile.JPG"
-                className={utilStyles.borderCircle}
-                height={100}
-                width={100}
-                alt=""
+                sx={{ width: 200, height: 200 }}
               />
               <h1 className={utilStyles.heading2Xl}>{name}</h1>
             </>
           ) : (
             <>
               <Link href="/">
-                <Image
-                  priority
-                  src="/images/profile.JPG"
-                  className={utilStyles.borderCircle}
-                  height={80}
-                  width={80}
-                  alt=""
-                />
+              <Avatar
+              alt=""
+                src="/images/profile.JPG"
+                sx={{ width: 150, height: 150 }}
+              />
               </Link>
               <h2 className={utilStyles.headingLg}>
                 <Link href="/" className={utilStyles.colorInherit}>
