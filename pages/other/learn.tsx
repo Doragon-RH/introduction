@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Script from 'next/script';
 import Layout from '../../components/layout';
+import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import Box from "@mui/material/Box";
 
 export default function Learn() {
   return (
@@ -10,7 +12,21 @@ export default function Learn() {
           <title>what I learned?</title>
         </Head>
         
-        <h1>what I learned?</h1>
+        <Box
+        component={TrendingUpIcon}
+        sx={{ color: "success.dark", fontSize: 30, verticalAlign: "sub" }}
+      />
+      <Box
+        sx={{
+          color: "success.dark",
+          display: "inline",
+          fontWeight: "medium",
+          mx: 1,
+          fontSize: 35
+        }}
+      >
+        what I learned?
+      </Box>
         <br />
         <h2>
             <a>Python</a>
