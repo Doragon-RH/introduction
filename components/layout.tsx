@@ -5,13 +5,23 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
+import Box from "@mui/material/Box";
 
 const name = 'Dragon-RH';
 export const siteTitle = 'introduction';
 export default function Layout({ children, home }) {
     return (
-        <div className={styles.container}>
-        <Head>
+        <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          bgcolor: "background.paper",
+          height: "auto",
+          margin: "20px",
+        }}>
+        {/* <Head>
             <link rel="icon" href="/favicon.ico" />
             <meta
             name="description"
@@ -25,7 +35,7 @@ export default function Layout({ children, home }) {
             />
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
-        </Head>
+        </Head> */}
         <header className={styles.header}>
           {home ? (
             <>
@@ -59,6 +69,33 @@ export default function Layout({ children, home }) {
             <Link href="/">← Back to home</Link>
           </div>
         )}
-      </div>
+        <Link
+          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Box
+            sx={{
+              bgcolor: "background.paper",
+              boxShadow: 1,
+              borderRadius: 1,
+              p: 2,
+              minWidth: 500,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              margin: "20px",
+            }}
+          > 
+          Powered by{' '}
+          <Image 
+          src="/vercel.svg" 
+          alt="Vercel"
+          width ={80}
+          height={80}
+          />
+        </Box>
+        </Link>
+      </Box>
     );
 }
