@@ -1,4 +1,4 @@
-import Head from 'next/head';
+// import Head from 'next/head';
 import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
@@ -7,7 +7,7 @@ import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 
-const name = 'Dragon-RH';
+const name = 'Doragon-RH';
 export const siteTitle = 'introduction';
 export default function Layout({ children, home }) {
     return (
@@ -40,7 +40,7 @@ export default function Layout({ children, home }) {
           {home ? (
             <>
               <Avatar
-              alt=""
+              alt="My picture"
                 src="/images/profile.jpg"
                 sx={{ width: 200, height: 200 }}
               />
@@ -50,24 +50,24 @@ export default function Layout({ children, home }) {
             <>
               <Link href="/">
               <Avatar
-              alt=""
+              alt="My picture"
                 src="/images/profile.jpg"
                 sx={{ width: 150, height: 150 }}
               />
               </Link>
               <h2 className={utilStyles.headingLg}>
-                <Link href="/" className={utilStyles.colorInherit}>
+                <Link href="/" >
                   {name}
                 </Link>
               </h2>
             </>
           )}
         </header>
-        <main>{children}</main>
+        <Box>{children}</Box>
         {!home && ( //0,null,false,undefined,NaN,""はfalseとして扱われる
-          <div className={styles.backToHome}>
+          <Box>
             <Link href="/">← Back to home</Link>
-          </div>
+          </Box>
         )}
         <Link
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"

@@ -2,14 +2,12 @@ import Head from 'next/head';
 import Layout,{siteTitle} from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import styles from '../styles/Home.module.css';
 
 const name = 'Dragon-RH';
 
 export default function Home() {
   return (
     <>
-    
       <Layout home={1}>
       <Head>
         <title>{siteTitle}</title>
