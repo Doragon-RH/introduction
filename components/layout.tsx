@@ -18,7 +18,9 @@ export default function Layout({ children, home }) {
           justifyContent: "center",
           bgcolor: "background.paper",
           height: "auto",
-          margin: "50px",
+          padding: "30px",
+          margin: "20px",
+          background: "lightgreen",
         }}>
         {/* <Head>
             <link rel="icon" href="/favicon.ico" />
@@ -87,7 +89,6 @@ export default function Layout({ children, home }) {
         >
           <Box
             sx={{
-              bgcolor: "background.paper",
               boxShadow: 1,
               borderRadius: 1,
               minWidth: 500,

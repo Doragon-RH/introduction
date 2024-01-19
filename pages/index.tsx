@@ -4,7 +4,8 @@ import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
 import { blue } from '@mui/material/colors';
 const name = 'Dragon-RH';
-
+// const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
+// onClick={preventDefault} クリックしたとき、ページ遷移を防ぐ
 export default function Home() {
   return (
     <>
@@ -37,7 +38,7 @@ export default function Home() {
         padding: "1rem",
       }}>
         what I did? <br />
-        <Link href="/other/did" underline="hover">
+        <Link href="/other/did" underline="hover" >
         Read More
       </Link>
       </Box>
