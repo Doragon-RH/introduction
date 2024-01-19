@@ -21,6 +21,7 @@ export default function Layout({ children, home }) {
           padding: "30px",
           margin: "20px",
           background: "lightgreen",
+          borderRadius: 40,
         }}>
         {/* <Head>
             <link rel="icon" href="/favicon.ico" />
@@ -97,14 +98,14 @@ export default function Layout({ children, home }) {
               justifyContent: "center",
             }}
           > 
-          Powered by{' '}
-          <Image 
-          src="/vercel.svg" 
-          alt="Vercel"
-          width ={80}
-          height={80}
-          />
-        </Box>
+            Powered by{' '}
+            <Image 
+            src="/vercel.svg" 
+            alt="Vercel"
+            width ={80}
+            height={80}
+            />
+          </Box>
         </Link>
       </Box>
     );

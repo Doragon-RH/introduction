@@ -15,11 +15,11 @@ export default function Learn() {
         
         <Box
         component={TrendingUpIcon}
-        sx={{ color: "success.dark", fontSize: 25, verticalAlign: "sub" }}
+        sx={{ color: "green", fontSize: 25, verticalAlign: "sub" }}
         />
         <Box
           sx={{
-            color: "success.dark",
+            color: "green",
             display: "inline",
             fontWeight: "medium",
             mx: 1,
@@ -31,23 +31,30 @@ export default function Learn() {
         <Box 
         sx={{
           padding: "1rem",
-          color:  blue[500],
           fontSize: "1.5rem",
         }}>
-            Python
+          Python
         </Box>
-        I can write a code in Python. and I learned AI technology and algolismn!<br />
         <Box
         sx={{
           padding: "1rem",
           color:  blue[500],
+          fontSize: "1.5rem",
+        }}>I can write a code in Python. and I learned AI technology and algolismn!</Box>
+        <Box
+        sx={{
+          padding: "1rem",
           fontSize: "1.5rem",
         }}>
           <Link href="https://github.com/Doragon-RH/supporta-z_vol.6_API" underline="hover">
               This is what I did.
           </Link>
         </Box>
-        And I also use Python to play AtCoder!<br />
+        <Box
+        sx={{
+          padding: "1rem",
+          fontSize: "1.5rem",
+        }}>And I also use Python to play AtCoder!</Box>
         <Box
         sx={{
           padding: "1rem",
@@ -61,12 +68,19 @@ export default function Learn() {
         <Box
         sx={{
           padding: "1rem",
-          color:  blue[500],
           fontSize: "1.5rem",
         }}>
           HTML, CSS
         </Box>
-        I leaned html and css!<br />
+        <Box
+        sx={{
+          padding: "1rem",
+          color:  blue[500],
+          fontSize: "1.5rem",
+        }}
+        >
+          I leaned html and css!
+        </Box>
         <Box
         sx={{
           padding: "1rem",
@@ -80,16 +94,19 @@ export default function Learn() {
         <Box
         sx={{
           padding: "1rem",
-          color:  blue[500],
           fontSize: "1.5rem",
         }}>
             JavaScript
         </Box>
-        I Learned js and its framework, React.js and React's framework, Next.js!<br />
         <Box
         sx={{
           padding: "1rem",
           color:  blue[500],
+          fontSize: "1.5rem",
+        }}>I Learned js and its framework, React.js and React's framework, Next.js!</Box>
+        <Box
+        sx={{
+          padding: "1rem",
           fontSize: "1.5rem",
         }}>
           <Link 
@@ -103,8 +120,6 @@ export default function Learn() {
             This is what I learned about Next.js!
           </Link>
         </Box>
-
-        
         </Layout>
     );
 }

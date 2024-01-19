@@ -1,15 +1,25 @@
 import Link from 'next/link';
 import Head from 'next/head';
 import Layout from '../../components/layout';
+import Box from "@mui/material/Box";
+import { blue } from '@mui/material/colors';
 
 export default function Did() {
     return (
             <Layout home ={0}>
                 <Head>
-                <title>What I did</title>
+                    What I did
                 </Head>
                 
-                <h1>What I did</h1>
+                <Box
+                sx={{
+                  padding: "1rem",
+                  color:  blue[500],
+                  fontSize: "2rem",
+
+                }}>
+                    What I did
+                </Box>
                 <br />
                 <h2>
                     <a>2022/04 ～ 2023/02</a>
