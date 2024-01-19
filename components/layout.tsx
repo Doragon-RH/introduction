@@ -1,11 +1,10 @@
 // import Head from 'next/head';
 import Image from 'next/image';
-import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
+import { blue } from '@mui/material/colors';
 
 const name = 'Doragon-RH';
 export const siteTitle = 'introduction';
@@ -19,7 +18,7 @@ export default function Layout({ children, home }) {
           justifyContent: "center",
           bgcolor: "background.paper",
           height: "auto",
-          margin: "20px",
+          margin: "50px",
         }}>
         {/* <Head>
             <link rel="icon" href="/favicon.ico" />
@@ -36,7 +35,7 @@ export default function Layout({ children, home }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head> */}
-        <header className={styles.header}>
+        
           {home ? (
             <>
               <Avatar
@@ -44,7 +43,10 @@ export default function Layout({ children, home }) {
                 src="/images/profile.jpg"
                 sx={{ width: 200, height: 200 }}
               />
-              <h1 className={utilStyles.heading2Xl}>{name}</h1>
+              <Box component="h1" 
+              sx={{
+                color: blue[500],
+              }}>{name}</Box>
             </>
           ) : (
             <>
@@ -55,17 +57,21 @@ export default function Layout({ children, home }) {
                 sx={{ width: 150, height: 150 }}
               />
               </Link>
-              <h2 className={utilStyles.headingLg}>
-                <Link href="/" >
-                  {name}
-                </Link>
-              </h2>
+              <Link href="/" >
+                <Box component="h2" 
+                sx={{
+                  color: blue[500],
+                }}>{name}
+                </Box>
+              </Link>
             </>
           )}
-        </header>
-        <Box>{children}</Box>
+        <Box component="section">{children}</Box>
         {!home && ( //0,null,false,undefined,NaN,""はfalseとして扱われる
-          <Box>
+          <Box
+          sx={{
+            padding: "20px",
+          }}>
             <Link href="/">← Back to home</Link>
           </Box>
         )}
@@ -84,7 +90,7 @@ export default function Layout({ children, home }) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              margin: "20px",
+              padding: "10px",
             }}
           > 
           Powered by{' '}
