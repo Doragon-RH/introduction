@@ -1,6 +1,6 @@
 // import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from "@mui/material/Link";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
@@ -50,14 +50,14 @@ export default function Layout({ children, home }) {
             </>
           ) : (
             <>
-              <Link href="/">
+              <Link href="/" >
               <Avatar
               alt="My picture"
                 src="/images/profile.jpg"
                 sx={{ width: 150, height: 150 }}
               />
               </Link>
-              <Link href="/" >
+              <Link href="/" underline="hover">
                 <Box component="h2" 
                 sx={{
                   color: blue[500],
@@ -76,13 +76,14 @@ export default function Layout({ children, home }) {
           sx={{
             padding: "20px",
           }}>
-            <Link href="/">← Back to home</Link>
+            <Link href="/" underline="hover">← Back to home</Link>
           </Box>
         )}
         <Link
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
+          underline="hover"
         >
           <Box
             sx={{

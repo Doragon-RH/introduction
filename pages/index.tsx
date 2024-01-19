@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Layout,{siteTitle} from '../components/layout';
-import Link from 'next/link';
+import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
+import { blue } from '@mui/material/colors';
 const name = 'Dragon-RH';
 
 export default function Home() {
@@ -12,21 +13,35 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       
-      <Box component="section" >
-        <p>Hello!</p>
-        <p>
-          this is my introduction page.
-        </p>
+      <Box component="section" 
+      sx={{
+        color: blue[500],
+        fontSize: "2rem",
+        padding: "1rem",
+      }}>
+        Hello! <br />
+        this is my introduction page.
       </Box>
-      <Link href="/other/learn">
-        what I learned?<br /><br />
+      <Box sx={{
+        fontSize: "1.5rem",
+        padding: "1rem",
+      }}>
+        what I learned? <br />
+        <Link href="/other/learn" underline="hover">
         Read More
-      </Link><br /><br />
-      <Link href="/other/did">
-          what I did?<br /><br />
-          Read More
       </Link>
-        
+      </Box>
+      
+      <Box sx={{
+        fontSize: "1.5rem",
+        padding: "1rem",
+      }}>
+        what I did? <br />
+        <Link href="/other/did" underline="hover">
+        Read More
+      </Link>
+      </Box>
+      
       </Layout>
             {/* <style jsx>{`
               main {
