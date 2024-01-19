@@ -4,28 +4,17 @@ MUIのインストール
 
 npm install @mui/material @emotion/react @emotion/styled
 
+## 実行方法
+
+以下のコマンドを実行する
+
+npm run dev --> localhost:3000 に内容が表示される
 
 
-ReactとReact-domもピアー依存関係
+## フォルダーの説明
 
-"peerDependencies": {
-  "react": "^17.0.0 || ^18.0.0",
-  "react-dom": "^17.0.0 || ^18.0.0"
-},
+pages : 画面に表示するファイルがまとまっている
 
-:google web fonts CND
+component : 画面に表示する内容のレイアウトを設定している
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
-/>
-
-アイコンコンポーネント追加
-
-npm install @mui/icons-material
-
-headエレメントに追加
-
-<meta name="viewport" content="initial-scale=1, width=device-width" />
+public/images : プロフィール画像を格納している
