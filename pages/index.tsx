@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import Layout,{siteTitle} from '../components/layout';
-import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-
+import Box from "@mui/material/Box";
 const name = 'Dragon-RH';
 
 export default function Home() {
@@ -13,24 +12,20 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       
-      <section className={utilStyles.headingMd}>
+      <Box component="section" >
         <p>Hello!</p>
         <p>
           this is my introduction page.
         </p>
-      </section>
-      <h3>
-        <Link href="/other/learn">
-          what I learned?<br /><br />
+      </Box>
+      <Link href="/other/learn">
+        what I learned?<br /><br />
+        Read More
+      </Link><br /><br />
+      <Link href="/other/did">
+          what I did?<br /><br />
           Read More
-        </Link><br /><br />
-      </h3>
-      <h3>
-        <Link href="/other/did">
-            what I did?<br /><br />
-            Read More
-        </Link>
-      </h3>
+      </Link>
         
       </Layout>
             {/* <style jsx>{`

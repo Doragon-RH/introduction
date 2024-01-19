@@ -66,7 +66,11 @@ export default function Layout({ children, home }) {
               </Link>
             </>
           )}
-        <Box component="section">{children}</Box>
+        <Box component="section"
+        sx={{
+          padding: "20px",
+        
+        }}>{children}</Box>
         {!home && ( //0,null,false,undefined,NaN,""はfalseとして扱われる
           <Box
           sx={{
@@ -85,12 +89,10 @@ export default function Layout({ children, home }) {
               bgcolor: "background.paper",
               boxShadow: 1,
               borderRadius: 1,
-              p: 2,
               minWidth: 500,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              padding: "10px",
             }}
           > 
           Powered by{' '}
