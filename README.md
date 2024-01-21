@@ -3,7 +3,8 @@
 MUIのインストール
 
 npm install @mui/material @emotion/react @emotion/styled
-
+npm install @fontsource/roboto
+npm install @mui/icons-material
 ## 実行方法
 
 以下のコマンドを実行する
