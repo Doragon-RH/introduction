@@ -1,9 +1,15 @@
 以前学習した内容に加えてMUIを学習し、自己紹介ページを作成していきたいと思います
 
+デプロイのリンク
+
+https://introduction-lwyegc2sa-honbinryus-projects.vercel.app
+
 MUIのインストール
 
 npm install @mui/material @emotion/react @emotion/styled
+
 npm install @fontsource/roboto
+
 npm install @mui/icons-material
 ## 実行方法
 
