@@ -115,7 +115,7 @@ export default function Learn() {
             This is what I learned about React!
           </Link ><br />
           <Link 
-          href="introduction-liard.vercel.app" 
+          href="/" 
             
           underline="hover">
             This is what I learned about Next.js!
