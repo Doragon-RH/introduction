@@ -1,31 +1,46 @@
-以前学習した内容に加えてMUIを学習し、自己紹介ページを作成していきたいと思います
+# Doragon-RH introduction
 
-デプロイのリンク
+Doragon-RHの個人ポートフォリオサイトです。大学院での学習、ソフトウェア開発、AI・機械学習への関心、GitHubでのプロジェクトや技術活動を紹介します。
 
-https://introduction-lwyegc2sa-honbinryus-projects.vercel.app
+## 使用技術
 
+- Next.js（Pages Router）
+- React 18 / TypeScript
+- MUI / Emotion
 
-https://github.com/user-attachments/assets/b4140cbb-d7e4-4fe0-92d7-ea092c12c69e
+## ローカルで起動
 
+```bash
+npm install
+npm run dev
+```
 
-MUIのインストール
+ブラウザで `http://localhost:3000` を開きます。公開用ビルドは次のコマンドで確認できます。
 
-npm install @mui/material @emotion/react @emotion/styled
+```bash
+npm run build
+npm start
+```
 
-npm install @fontsource/roboto
+## CI/CD
 
-npm install @mui/icons-material
-## 実行方法
+- Pull Requestと `master` へのpushで、GitHub Actionsが依存関係のインストール、TypeScriptの型チェック、Next.jsビルドを実行します。
+- デプロイはVercelで行います。GitHubリポジトリをVercelにImportし、Production Branchに `master` を設定してください。
 
-以下のコマンドを実行する
+デプロイ先: VercelのプロジェクトURL（公開後に追記）
 
-npm run dev --> localhost:3000 に内容が表示される
+## ディレクトリ構成
 
+```text
+pages/
+	index.tsx          # Home / About / Skills / Projects / Research / Experience / Contact
+	_app.tsx           # Next.jsアプリ共通設定
+components/
+	layout.tsx         # 共通レイアウトとレスポンシブナビゲーション
+public/images/       # プロフィール画像などの静的ファイル
+.github/workflows/   # GitHub ActionsによるCI
+```
 
-## フォルダーの説明
+## 更新方針
 
-pages : 画面に表示するファイルがまとまっている
-
-component : 画面に表示する内容のレイアウトを設定している
-
-public/images : プロフィール画像を格納している
+プロジェクト情報や研究内容は、公開できる事実を確認してから `pages/index.tsx` に追加します。未確定の研究内容・連絡先・デプロイURLはTODOとして管理し、推測で補完しません。
