@@ -87,3 +87,13 @@ FP2級取得後に、相談受付状況、正式な料金、予約導線など�
 
 
 問い合わせフォームへのリンクは、トップページだけでなく全ページ共通のフッターにも表示し、どのページからでもアクセスできるようにします。
+
+
+## Security / Dependency Maintenance
+
+- Dependabot checks npm dependencies and GitHub Actions weekly and opens update pull requests.
+- Minor/patch version updates are grouped to reduce maintenance overhead; major updates remain separate for safer review.
+- Pull requests that introduce a dependency with a high-or-critical known vulnerability are checked by Dependency Review.
+- CodeQL scans the JavaScript/TypeScript codebase on pushes to `master` and on a weekly schedule.
+- CI uses a maintained Node.js LTS release via `.nvmrc`.
+- Security-sensitive framework major upgrades are handled in dedicated pull requests rather than being mixed with routine maintenance.
