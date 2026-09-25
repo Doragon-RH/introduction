@@ -39,8 +39,7 @@ const serviceFacts = [
   ['資格状況', 'FP3級取得済み / FP2級取得に向けて学習中'],
   ['サービス状況', '準備中（FP2級取得後に開始予定）'],
   ['想定形式', 'オンライン / 1回 約60分'],
-  ['想定件数', '月4件程度から開始予定'],
-  ['料金', '開始時に正式決定（初期は3,000〜5,000円程度を想定）'],
+  ['料金', '開始時に正式決定 / 初期モニターは応相談'],
 ];
 
 export default function FinancialPlanning() {
@@ -114,6 +113,18 @@ export default function FinancialPlanning() {
               <Typography sx={{ color: 'text.secondary' }}>{value}</Typography>
             </Box>
           ))}
+        </Box>
+      </Box>
+
+      <Box component="section" sx={{ py: 1, pb: 4 }}>
+        <Box sx={{ p: 2.5, borderRadius: 2, border: '1px solid', borderColor: 'divider', bgcolor: 'rgba(23, 63, 53, 0.04)' }}>
+          <Typography component="h3" sx={{ fontSize: '1.05rem', fontWeight: 700, mb: 1 }}>
+            初期モニター相談について
+          </Typography>
+          <Typography sx={{ color: 'text.secondary', lineHeight: 1.8 }}>
+            サービス開始後の最初の5名程度は、相談後のアンケートにご協力いただける方を対象に、大幅な割引を予定しています。
+            具体的な料金は、相談内容も踏まえて応相談とします。
+          </Typography>
         </Box>
       </Box>
 
