@@ -25,8 +25,9 @@ const navItems = [
   { label: 'Projects', href: '/#projects' },
   { label: 'Research', href: '/#research' },
   { label: 'Experience', href: '/#activity' },
+  { label: 'Work', href: '/work' },
   { label: 'FP', href: '/financial-planning' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'Contact', href: '/work#contact-form' },
 ];
 
 const name = 'Doragon-RH';
@@ -174,6 +175,27 @@ export default function Layout({ children, home }) {
           <Link href="/" underline="hover">← Back to home</Link>
         </Box>
       )}
+
+      <Box
+        component="footer"
+        sx={{
+          width: '100%',
+          maxWidth: 860,
+          mt: 3,
+          pt: 3,
+          pb: 1,
+          borderTop: '1px solid',
+          borderColor: 'divider',
+          textAlign: 'center',
+        }}
+      >
+        <Link href="/work#contact-form" underline="hover" sx={{ fontWeight: 600 }}>
+          お問い合わせ
+        </Link>
+        <Typography sx={{ mt: 1, color: 'text.secondary', fontSize: '0.85rem' }}>
+          お仕事・技術相談は専用フォームから受け付けています。
+        </Typography>
+      </Box>
     </Box>
   );
 }
