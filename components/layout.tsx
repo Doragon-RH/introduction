@@ -25,9 +25,9 @@ const navItems = [
   { label: 'Projects', href: '/#projects' },
   { label: 'Research', href: '/#research' },
   { label: 'Experience', href: '/#activity' },
-  { label: 'Work', href: '/work' },
+  { label: 'Development', href: '/development' },
   { label: 'FP', href: '/financial-planning' },
-  { label: 'Contact', href: '/work#contact-form' },
+  { label: 'Contact', href: '/development#contact' },
 ];
 
 const name = 'Doragon-RH';
@@ -189,11 +189,11 @@ export default function Layout({ children, home }) {
           textAlign: 'center',
         }}
       >
-        <Link href="/work#contact-form" underline="hover" sx={{ fontWeight: 600 }}>
-          お問い合わせ
+        <Link href="/development" underline="hover" sx={{ fontWeight: 600 }}>
+          開発案件のご相談
         </Link>
         <Typography sx={{ mt: 1, color: 'text.secondary', fontSize: '0.85rem' }}>
-          お仕事・技術相談は専用フォームから受け付けています。
+          Web開発・AI・業務効率化などの開発案件を受け付けています。初回相談は無料です。
         </Typography>
       </Box>
     </Box>
