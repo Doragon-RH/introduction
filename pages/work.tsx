@@ -17,26 +17,19 @@ const technicalExperiences = [
     title: 'Full-stack Web Application Development',
     period: '約2年',
     description:
-      'Next.jsとRuby on Railsを中心に、5〜10人程度のチームでWebアプリケーション開発を経験しています。フロントエンド実装、API設計・実装、DB設計、認証、テスト、CI/CD、保守・改修まで担当し、必要なライブラリの調査・比較・選定から実装まで行ってきました。本番リリース、コードレビュー、要件整理を除く幅広い開発工程を経験しています。プロジェクト期間は約2か月〜1年で、担当機能は概算20件以上、不具合修正・対応は累計100件以上です。',
-    skills: ['Next.js', 'React', 'TypeScript', 'Ruby on Rails', 'MySQL', 'Redis', 'REST API', 'Docker', 'CI/CD'],
-  },
-  {
-    title: 'Frontend Development',
-    period: '約2年',
-    description:
-      'Next.jsではPages RouterとApp Routerの両方を利用し、React / TypeScriptを中心に画面実装、API連携、SSR / SSGを経験しています。UI実装ではMUIとTailwind CSSの両方を使用してきました。',
-    skills: ['Next.js', 'Pages Router', 'App Router', 'React', 'TypeScript', 'MUI', 'Tailwind CSS', 'SSR', 'SSG'],
+      'Next.jsとRuby on Railsを中心に、5〜10人程度のチームでWebアプリケーション開発を経験しています。フロントエンドではReact / TypeScript、Pages Router / App Router、MUI / Tailwind CSS、API連携、SSR / SSGを使用。バックエンドではRuby on Rails、MySQL、Redis、REST API、Dockerを利用し、API設計・実装、DB設計、認証、テスト、CI/CD、保守・改修まで担当しました。必要なライブラリの調査・比較・選定から実装まで行い、本番リリース、コードレビュー、要件整理を除く幅広い開発工程を経験しています。プロジェクト期間は約2か月〜1年で、担当機能は概算20件以上、不具合修正・対応は累計100件以上です。',
+    skills: ['Next.js', 'Pages Router', 'App Router', 'React', 'TypeScript', 'MUI', 'Tailwind CSS', 'SSR', 'SSG', 'Ruby on Rails', 'MySQL', 'Redis', 'REST API', 'Docker', 'CI/CD'],
   },
   {
     title: 'Internal Workflow Automation',
-    period: '約1年',
+    period: '約1年の就業経験内',
     description:
       '社内の定型作業を対象に、Google Apps Script、Google スプレッドシート、Slack連携、データ集計の自動化を行いました。またPythonを用いて、規則に沿ったファイル名変更、教材内リンクの生成、Excel操作など、それまで手作業だった処理を自動化しました。自動化コードの実装時間を除いた日常作業では、作業時間を概算で60%以上削減できたと見積もっています。主に2人程度で作業し、繰り返し発生する負担の大きい作業をコードへ置き換えることを重視しました。',
     skills: ['Python', 'Google Apps Script', 'Google Sheets', 'Slack Integration', 'Excel Automation', 'Data Automation'],
   },
   {
     title: 'QA / Learning Content Maintenance',
-    period: '約1年',
+    period: '上記と同じ約1年の就業経験内',
     description:
       'プログラミングスクールの運営に関わり、受講者からのQA対応を行いました。あわせて、教材で利用するコードの不具合や分かりにくい箇所を確認し、必要に応じて教材コードを修正しました。',
     skills: ['QA', 'Debugging', 'Code Maintenance', 'Technical Support'],
