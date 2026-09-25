@@ -50,11 +50,11 @@ export default function Home() {
         <Chip label="つくること、学ぶこと" color="primary" variant="outlined" sx={{ mb: 2 }} />
         <Box component="h2" sx={{ fontSize: { xs: '2rem', sm: '2.8rem' }, lineHeight: 1.15, mt: 0, mb: 2 }}>Hello, I'm Doragon-RH.</Box>
         <Box component="p" sx={{ fontSize: '1.15rem', lineHeight: 1.9, maxWidth: 620, mt: 0 }}>
-          大学院で学びながら、ソフトウェア開発とAI・機械学習を中心に活動しています。Python・TypeScriptを使った開発と、技術で現実の課題を解決することに関心があります。
+          大学院で学びながら、ソフトウェア開発とAI・機械学習を中心に活動しています。Python・TypeScriptを使った開発に加え、FP3級を取得し、将来のFP相談に向けてFP2級の学習も進めています。技術とデータを使って現実の課題を整理・解決することに関心があります。
         </Box>
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5} sx={{ mt: 3 }}>
           <Button variant="contained" startIcon={<GitHubIcon />} href="https://github.com/Doragon-RH" target="_blank" rel="noreferrer">GitHubを見る</Button>
-          <Button variant="outlined" startIcon={<ArrowOutwardIcon />} href="#projects">活動を見る</Button>
+          <Button variant="outlined" startIcon={<ArrowOutwardIcon />} href="#projects">活動を見る</Button>\n          <Button variant="outlined" href="/financial-planning">FP相談について</Button>
         </Stack>
       </Box>
 
@@ -132,6 +132,19 @@ export default function Home() {
           <Box component="p">研究テーマの概要: TODO</Box>
           <Box component="p" sx={{ mb: 0 }}>今後の方向性: TODO</Box>
         </Box>
+      </Box>
+
+      <Box id="financial-planning" component="section" sx={sectionSx}>
+        <Box component="h2" sx={{ fontSize: '1.6rem' }}>Financial Planning</Box>
+        <Box component="p" sx={{ lineHeight: 1.9 }}>
+          FP3級を取得し、現在はFP2級取得に向けて学習しています。FP2級取得後は、家計・ライフプラン・資産形成を中心としたオンライン相談を小規模に始める予定です。
+        </Box>
+        <Box component="p" sx={{ color: 'text.secondary', lineHeight: 1.8 }}>
+          現在はサービス準備中です。相談予定の内容、想定する形式、扱う範囲については専用ページにまとめています。
+        </Box>
+        <Button variant="outlined" href="/financial-planning" endIcon={<ArrowOutwardIcon />}>
+          FP相談ページを見る
+        </Button>
       </Box>
 
       <Box id="contact" component="section" sx={{ ...sectionSx, pb: 5 }}>
