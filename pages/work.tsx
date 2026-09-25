@@ -82,19 +82,22 @@ export default function Work() {
         <Typography component="h1" sx={{ fontSize: { xs: '2rem', sm: '2.6rem' }, fontWeight: 700, lineHeight: 1.2, mb: 2 }}>
           技術でできることを、一緒に整理します。
         </Typography>
-        <Typography sx={{ fontSize: '1.1rem', lineHeight: 1.9, maxWidth: 720 }}>
-          Web開発、AI・機械学習、データ活用など、これまで培ってきたスキルを活かしたお仕事のご相談を受け付けています。
-          具体的な仕様が決まっていない段階でも、まずは無料相談から課題や目的を整理します。
+        <Typography sx={{ fontSize: '1.1rem', lineHeight: 1.9, maxWidth: 720, mb: 2.5 }}>
+          これまでの技術経験と対応できる領域をまとめています。
+          Web開発、AI・機械学習、データ活用、業務効率化などの開発案件も受け付けています。
         </Typography>
+        <Button variant="contained" href="/development" endIcon={<ArrowOutwardIcon />}>
+          開発案件の相談はこちら
+        </Button>
       </Box>
 
       <Box sx={{ p: 2.5, borderRadius: 2, bgcolor: 'rgba(23, 63, 53, 0.06)', border: '1px solid', borderColor: 'divider', mb: 4 }}>
         <Typography component="h2" sx={{ fontSize: '1.25rem', fontWeight: 700, mb: 1 }}>
-          まずは無料相談から
+          開発案件を受け付けています
         </Typography>
         <Typography sx={{ color: 'text.secondary', lineHeight: 1.8 }}>
-          「こういうことはできるか」「業務をもう少し効率化したい」「AIを使えるか知りたい」といった段階でも構いません。
-          ご相談内容を確認したうえで、対応可能か、どのような進め方がよいか、費用が発生する場合はその範囲を整理します。
+          初回相談では、現在の課題や目的を伺い、対応可能性を確認するところまで無料で行います。
+          具体的な調査・解決策の設計や提案、開発・実装は有料です。料金は工数や難易度などをもとに案件ごとにお見積もりします。
         </Typography>
       </Box>
 
@@ -162,10 +165,10 @@ export default function Work() {
           ご相談からの流れ
         </Typography>
         <Box component="ol" sx={{ lineHeight: 2, pl: 3 }}>
-          <li>まずは無料でご相談ください。</li>
-          <li>課題、目的、現在の状況を整理します。</li>
-          <li>対応可能な範囲と進め方をご提案します。</li>
-          <li>実装・開発が必要な場合は、内容と費用を確認したうえで進めます。</li>
+          <li>初回無料相談で、課題・目的・現在の状況を整理します。</li>
+          <li>対応可能性を確認し、有料対応が必要な範囲を共有します。</li>
+          <li>具体的な解決策の設計・提案が必要な場合は、費用を確認したうえで進めます。</li>
+          <li>開発・実装を行う場合も、対象範囲と費用に合意してから着手します。</li>
         </Box>
       </Box>
 
@@ -191,7 +194,7 @@ export default function Work() {
         </Typography>
         <Typography sx={{ lineHeight: 1.9, mb: 2 }}>
           メールアドレスをサイト上に直接公開せず、専用フォームからお問い合わせを受け付けています。
-          お名前、個人・法人の区分、お問い合わせ内容、ご希望の連絡手段をご入力ください。
+          お名前、個人・法人の区分、相談カテゴリ、お問い合わせ内容、ご希望の連絡手段をご入力ください。
         </Typography>
         <Box sx={{ p: 2.5, borderRadius: 2, bgcolor: 'rgba(23, 63, 53, 0.05)', border: '1px solid', borderColor: 'divider', mb: 2 }}>
           <Typography component="h3" sx={{ fontSize: '1.05rem', fontWeight: 700, mb: 1 }}>
