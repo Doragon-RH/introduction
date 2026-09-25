@@ -123,7 +123,7 @@ export default function FinancialPlanning() {
           </Typography>
           <Typography sx={{ color: 'text.secondary', lineHeight: 1.8 }}>
             サービス開始後の最初の5名程度は、相談後のアンケートにご協力いただける方を対象に、大幅な割引を予定しています。
-            具体的な料金は、相談内容も踏まえて応相談とします。
+            初期モニターの具体的な料金は応相談とします。
           </Typography>
         </Box>
       </Box>
