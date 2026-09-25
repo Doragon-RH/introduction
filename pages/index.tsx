@@ -54,7 +54,8 @@ export default function Home() {
         </Box>
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5} sx={{ mt: 3 }}>
           <Button variant="contained" startIcon={<GitHubIcon />} href="https://github.com/Doragon-RH" target="_blank" rel="noreferrer">GitHubを見る</Button>
-          <Button variant="outlined" startIcon={<ArrowOutwardIcon />} href="#projects">活動を見る</Button>\n          <Button variant="outlined" href="/financial-planning">FP相談について</Button>
+          <Button variant="outlined" startIcon={<ArrowOutwardIcon />} href="#projects">活動を見る</Button>
+          <Button variant="outlined" href="/financial-planning">FP相談について</Button>
         </Stack>
       </Box>
 
