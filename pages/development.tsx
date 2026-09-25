@@ -12,7 +12,7 @@ import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
 import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
 import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
 
-const inquiryFormUrl = 'https://form.jotform.com/262670502611045';
+const inquiryFormUrl = 'https://form.jotform.com/262672156487063';
 
 const developmentAreas = [
   {
