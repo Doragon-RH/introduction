@@ -22,9 +22,11 @@ const linkSx = { color: 'primary.main', fontWeight: 600 };
 
 const skillGroups = [
   { title: 'Programming', skills: ['Python', 'TypeScript', 'JavaScript', 'PHP', 'Ruby', 'Go'] },
-  { title: 'Frontend', skills: ['React', 'Next.js', 'MUI', 'HTML', 'CSS', 'Vue'] },
-  { title: 'AI / Machine Learning', skills: ['Machine Learning', 'scikit-learn', 'OpenCV'] },
-  { title: 'Backend / Development', skills: ['FastAPI', 'Laravel', 'MySQL', 'Docker'] },
+  { title: 'Frontend', skills: ['React', 'Next.js', 'MUI', 'Tailwind CSS', 'HTML', 'CSS'] },
+  { title: 'AI / Machine Learning', skills: ['Machine Learning', 'PyTorch', 'PyTorch Lightning', 'scikit-learn', 'OpenCV'] },
+  { title: 'Backend / Data', skills: ['Ruby on Rails', 'FastAPI', 'Laravel', 'MySQL', 'Redis', 'REST API'] },
+  { title: 'Automation', skills: ['Google Apps Script', 'Google Sheets', 'Slack Integration', 'Excel Automation'] },
+  { title: 'Cloud / Infrastructure', skills: ['AWS', 'GCP', 'Docker'] },
   { title: 'Tools', skills: ['Git', 'GitHub', 'Poetry'] },
 ];
 
@@ -89,6 +91,17 @@ export default function Home() {
         <Link href="https://atcoder.jp/users/ryuuhon" target="_blank" rel="noreferrer" sx={{ ...linkSx, display: 'inline-block', mt: 3 }}>AtCoder profile <ArrowOutwardIcon sx={{ fontSize: 15, verticalAlign: 'middle' }} /></Link>
       </Box>
 
+      <Box id="work" component="section" sx={sectionSx}>
+        <Box component="h2" sx={{ fontSize: '1.6rem' }}>Work / Consultation</Box>
+        <Box component="p" sx={{ lineHeight: 1.9 }}>
+          Web開発、AI・機械学習、データ活用など、これまで培ってきた技術を活かしたお仕事のご相談も受け付けています。
+          まずは無料相談から、課題や実現したいことを整理し、対応可能な内容をご提案します。
+        </Box>
+        <Button variant="outlined" href="/work" endIcon={<ArrowOutwardIcon />}>
+          お仕事の相談について
+        </Button>
+      </Box>
+
       <Box id="projects" component="section" sx={sectionSx}>
         <Box component="h2" sx={{ fontSize: '1.6rem' }}>What I've built</Box>
         <Box component="p" sx={{ color: 'text.secondary', lineHeight: 1.8 }}>GitHubで公開・参加しているプロジェクトから、代表的なものを紹介します。</Box>
@@ -122,6 +135,9 @@ export default function Home() {
           <Chip icon={<CodeIcon />} label="個人開発・学習" />
           <Chip icon={<TrendingUpIcon />} label="継続的な活動" />
         </Stack>
+        <Button variant="outlined" href="/work#technical-experience" endIcon={<ArrowOutwardIcon />} sx={{ mt: 2.5 }}>
+          技術経験を見る
+        </Button>
       </Box>
 
       <Box id="research" component="section" sx={sectionSx}>
@@ -150,9 +166,11 @@ export default function Home() {
 
       <Box id="contact" component="section" sx={{ ...sectionSx, pb: 5 }}>
         <Box component="h2" sx={{ fontSize: '1.6rem' }}>Contact</Box>
-        <Box component="p" sx={{ lineHeight: 1.8 }}>活動や制作物については、GitHubをご覧ください。</Box>
-        <Button variant="contained" startIcon={<GitHubIcon />} href="https://github.com/Doragon-RH" target="_blank" rel="noreferrer">GitHubプロフィール</Button>
-        <Box component="p" sx={{ color: 'text.secondary', fontSize: '0.9rem', mt: 2, mb: 0 }}>X、LinkedIn、メールアドレスは公開情報を確認後に追加します。</Box>
+        <Box component="p" sx={{ lineHeight: 1.8 }}>お仕事や技術相談については、専用フォームからお問い合わせください。メールアドレスはサイト上には直接掲載していません。</Box>
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5}>
+          <Button variant="contained" href="/work#contact-form">お問い合わせフォーム</Button>
+          <Button variant="outlined" startIcon={<GitHubIcon />} href="https://github.com/Doragon-RH" target="_blank" rel="noreferrer">GitHubプロフィール</Button>
+        </Stack>
       </Box>
 
       </Layout>
