@@ -82,7 +82,7 @@ export default function Home() {
           {skillGroups.map((group) => (
             <Box key={group.title} sx={{ borderLeft: '3px solid', borderColor: 'primary.main', pl: 2 }}>
               <Box component="h3" sx={{ fontSize: '1rem', mt: 0, mb: 1 }}>{group.title}</Box>
-              <Stack direction="row" flexWrap="wrap" gap={0.75}>
+              <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 0.75 }}>
                 {group.skills.map((skill) => <Chip key={skill} label={skill} size="small" />)}
               </Stack>
             </Box>
@@ -108,7 +108,7 @@ export default function Home() {
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' }, gap: 2, mt: 3 }}>
           {projects.map((project) => (
             <Box key={project.name} sx={{ border: '1px solid', borderColor: 'divider', borderRadius: 2, p: 2.5, bgcolor: 'background.paper', transition: 'transform 180ms ease, box-shadow 180ms ease', '&:hover': { transform: 'translateY(-3px)', boxShadow: 3 } }}>
-              <Stack direction="row" justifyContent="space-between" alignItems="center" gap={1}>
+              <Stack direction="row" sx={{ justifyContent: 'space-between', alignItems: 'center', gap: 1 }}>
                 <Box component="h3" sx={{ fontSize: '1.05rem', mt: 0, mb: 1 }}>{project.name}</Box>
                 <Chip label={project.language} size="small" />
               </Stack>
@@ -130,7 +130,7 @@ export default function Home() {
           <li>2023/10 - 2023/12: Go言語を学習</li>
           <li>2023/12 - 現在: AtCoderコンテストに参加</li>
         </Box>
-        <Stack direction="row" flexWrap="wrap" gap={1.5}>
+        <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1.5 }}>
           <Chip icon={<GroupsIcon />} label="ハッカソン参加" />
           <Chip icon={<CodeIcon />} label="個人開発・学習" />
           <Chip icon={<TrendingUpIcon />} label="継続的な活動" />

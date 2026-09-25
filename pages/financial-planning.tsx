@@ -64,7 +64,7 @@ export default function FinancialPlanning() {
         </Typography>
 
         <Box sx={{ mt: 3, p: 2.5, borderRadius: 2, bgcolor: 'rgba(23, 63, 53, 0.06)', border: '1px solid', borderColor: 'divider' }}>
-          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5} alignItems={{ xs: 'flex-start', sm: 'center' }}>
+          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5} sx={{ alignItems: { xs: 'flex-start', sm: 'center' } }}>
             <Chip label="FP相談サービス準備中" color="primary" />
             <Typography sx={{ color: 'text.secondary' }}>
               FP2級取得後に相談受付を開始する予定です。
@@ -86,7 +86,7 @@ export default function FinancialPlanning() {
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' }, gap: 2 }}>
           {consultationTopics.map((topic) => (
             <Box key={topic.title} sx={{ p: 2.5, border: '1px solid', borderColor: 'divider', borderRadius: 2, bgcolor: 'background.paper' }}>
-              <Stack direction="row" spacing={1.2} alignItems="center" sx={{ mb: 1 }}>
+              <Stack direction="row" spacing={1.2} sx={{ alignItems: 'center', mb: 1 }}>
                 {topic.icon}
                 <Typography component="h3" sx={{ fontSize: '1.05rem', fontWeight: 700 }}>
                   {topic.title}
@@ -137,7 +137,7 @@ export default function FinancialPlanning() {
         <Typography sx={{ lineHeight: 1.9, mb: 2 }}>
           FP相談に加えて、Web開発・データ分析の経験を活かし、家計や資産形成を可視化できるシミュレーション機能も検討しています。
         </Typography>
-        <Stack direction="row" flexWrap="wrap" gap={1}>
+        <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1 }}>
           <Chip label="家計シミュレーター" />
           <Chip label="資産形成シミュレーター" />
           <Chip label="ライフプランシミュレーター" />
