@@ -54,8 +54,9 @@ export default function Home() {
         <Box component="p" sx={{ fontSize: '1.15rem', lineHeight: 1.9, maxWidth: 620, mt: 0 }}>
           大学院で学びながら、ソフトウェア開発とAI・機械学習を中心に活動しています。Python・TypeScriptを使った開発に加え、FP3級を取得し、将来のFP相談に向けてFP2級の学習も進めています。技術とデータを使って現実の課題を整理・解決することに関心があります。
         </Box>
-        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5} sx={{ mt: 3 }}>
-          <Button variant="contained" startIcon={<GitHubIcon />} href="https://github.com/Doragon-RH" target="_blank" rel="noreferrer">GitHubを見る</Button>
+        <Stack direction={{ xs: 'column', sm: 'row' }} sx={{ mt: 3, flexWrap: 'wrap', gap: 1.5 }}>
+          <Button variant="contained" href="/development" endIcon={<ArrowOutwardIcon />}>開発案件の相談はこちら</Button>
+          <Button variant="outlined" startIcon={<GitHubIcon />} href="https://github.com/Doragon-RH" target="_blank" rel="noreferrer">GitHubを見る</Button>
           <Button variant="outlined" startIcon={<ArrowOutwardIcon />} href="#projects">活動を見る</Button>
           <Button variant="outlined" href="/financial-planning">FP相談について</Button>
         </Stack>
@@ -92,14 +93,20 @@ export default function Home() {
       </Box>
 
       <Box id="work" component="section" sx={sectionSx}>
-        <Box component="h2" sx={{ fontSize: '1.6rem' }}>Work / Consultation</Box>
+        <Chip label="開発案件 受付中" color="primary" sx={{ mb: 1.5 }} />
+        <Box component="h2" sx={{ fontSize: '1.6rem' }}>Development Work</Box>
         <Box component="p" sx={{ lineHeight: 1.9 }}>
-          Web開発、AI・機械学習、データ活用など、これまで培ってきた技術を活かしたお仕事のご相談も受け付けています。
-          まずは無料相談から、課題や実現したいことを整理し、対応可能な内容をご提案します。
+          Web開発、AI・機械学習、データ活用、業務効率化などの開発案件を受け付けています。
+          初回相談は無料で、課題と対応可能性を整理します。具体的な解決策の設計・提案や開発は、内容を確認したうえで有料で対応します。
         </Box>
-        <Button variant="outlined" href="/work" endIcon={<ArrowOutwardIcon />}>
-          お仕事の相談について
-        </Button>
+        <Stack direction={{ xs: 'column', sm: 'row' }} sx={{ gap: 1.5 }}>
+          <Button variant="contained" href="/development" endIcon={<ArrowOutwardIcon />}>
+            開発案件の相談はこちら
+          </Button>
+          <Button variant="outlined" href="/work#technical-experience">
+            技術経験を見る
+          </Button>
+        </Stack>
       </Box>
 
       <Box id="projects" component="section" sx={sectionSx}>
@@ -168,7 +175,7 @@ export default function Home() {
         <Box component="h2" sx={{ fontSize: '1.6rem' }}>Contact</Box>
         <Box component="p" sx={{ lineHeight: 1.8 }}>お仕事や技術相談については、専用フォームからお問い合わせください。メールアドレスはサイト上には直接掲載していません。</Box>
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5}>
-          <Button variant="contained" href="/work#contact-form">お問い合わせフォーム</Button>
+          <Button variant="contained" href="/development#contact">開発案件の相談はこちら</Button>
           <Button variant="outlined" startIcon={<GitHubIcon />} href="https://github.com/Doragon-RH" target="_blank" rel="noreferrer">GitHubプロフィール</Button>
         </Stack>
       </Box>
