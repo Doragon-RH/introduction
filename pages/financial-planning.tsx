@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';
-import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
@@ -163,12 +162,10 @@ export default function FinancialPlanning() {
       <Box sx={{ py: 4 }}>
         <Button
           variant="outlined"
-          component={Link}
           href="https://github.com/Doragon-RH"
           target="_blank"
           rel="noreferrer"
           endIcon={<ArrowOutwardIcon />}
-          underline="none"
         >
           GitHubを見る
         </Button>
