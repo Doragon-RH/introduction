@@ -113,7 +113,7 @@ export default function Work() {
               key={experience.title}
               sx={{ p: 2.5, border: '1px solid', borderColor: 'divider', borderRadius: 2, bgcolor: 'background.paper' }}
             >
-              <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between" gap={1}>
+              <Stack direction={{ xs: 'column', sm: 'row' }} sx={{ justifyContent: 'space-between', gap: 1 }}>
                 <Typography component="h3" sx={{ fontSize: '1.1rem', fontWeight: 700 }}>
                   {experience.title}
                 </Typography>
@@ -122,7 +122,7 @@ export default function Work() {
               <Typography sx={{ color: 'text.secondary', lineHeight: 1.8, my: 1.5 }}>
                 {experience.description}
               </Typography>
-              <Stack direction="row" flexWrap="wrap" gap={0.75}>
+              <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 0.75 }}>
                 {experience.skills.map((skill) => (
                   <Chip key={skill} label={skill} size="small" />
                 ))}
@@ -141,7 +141,7 @@ export default function Work() {
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' }, gap: 2, mt: 3 }}>
           {consultationAreas.map((area) => (
             <Box key={area.title} sx={{ p: 2.5, border: '1px solid', borderColor: 'divider', borderRadius: 2, bgcolor: 'background.paper' }}>
-              <Stack direction="row" spacing={1.2} alignItems="center" sx={{ mb: 1 }}>
+              <Stack direction="row" spacing={1.2} sx={{ alignItems: 'center', mb: 1 }}>
                 {area.icon}
                 <Typography component="h3" sx={{ fontSize: '1.05rem', fontWeight: 700 }}>
                   {area.title}
@@ -178,7 +178,7 @@ export default function Work() {
         <Typography sx={{ color: 'text.secondary', lineHeight: 1.8, mb: 2 }}>
           主に以下の技術を利用しています。案件内容に応じて、対応可能性を確認したうえで進めます。
         </Typography>
-        <Stack direction="row" flexWrap="wrap" gap={1}>
+        <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1 }}>
           {['Python', 'TypeScript', 'JavaScript', 'React', 'Next.js', 'MUI', 'Tailwind CSS', 'Ruby on Rails', 'FastAPI', 'Laravel', 'MySQL', 'Redis', 'REST API', 'PyTorch', 'scikit-learn', 'OpenCV', 'Google Apps Script', 'Google Sheets', 'Slack', 'AWS', 'GCP', 'Docker', 'GitHub'].map((skill) => (
             <Chip key={skill} label={skill} />
           ))}
