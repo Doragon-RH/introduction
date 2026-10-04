@@ -12,6 +12,30 @@ import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
 import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
 import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
 
+const careerHistory = [
+  {
+    companyType: 'Web系企業',
+    role: '有償長期インターン / フルスタックエンジニア',
+    period: '2024/08 - 2026/08',
+    description:
+      'フルスタックエンジニアとして、Webアプリケーション開発に従事しました。フロントエンド・バックエンドの双方を担当し、継続的な機能開発・改修を経験しました。',
+  },
+  {
+    companyType: 'IT・教育系企業',
+    role: '長期インターン',
+    period: '2024/12 - 2025/12',
+    description:
+      'プログラミングスクールのQA対応と、社内業務の効率化・自動化を中心に担当しました。受講者対応に加え、Google Apps ScriptやPythonなどを用いた定型業務の改善に取り組みました。',
+  },
+  {
+    companyType: 'AI・データ分析系企業',
+    role: 'インターン / データサイエンティスト',
+    period: '2026/08 - 現在',
+    description:
+      'データサイエンティストとしてインターンに従事しています。業務内容は、公開可能な範囲に限定して技術経験として整理しています。',
+  },
+];
+
 const technicalExperiences = [
   {
     title: 'Full-stack Web Application Development',
@@ -99,6 +123,40 @@ export default function Work() {
           初回相談では、現在の課題や目的を伺い、対応可能性を確認するところまで無料で行います。
           具体的な調査・解決策の設計や提案、開発・実装は有料です。料金は工数や難易度などをもとに案件ごとにお見積もりします。
         </Typography>
+      </Box>
+
+      <Divider />
+
+      <Box id="career-history" component="section" sx={{ py: 4 }}>
+        <Typography component="h2" sx={{ fontSize: '1.6rem', fontWeight: 700, mb: 1 }}>
+          Career / Internship History
+        </Typography>
+        <Typography sx={{ color: 'text.secondary', lineHeight: 1.8, mb: 3 }}>
+          これまでの長期インターン・就業経験を、企業名や非公開情報を出さず、在籍期間・役割・担当内容が分かる形でまとめています。
+        </Typography>
+        <Stack spacing={2}>
+          {careerHistory.map((career) => (
+            <Box
+              key={`${career.companyType}-${career.period}`}
+              sx={{ p: 2.5, border: '1px solid', borderColor: 'divider', borderRadius: 2, bgcolor: 'background.paper' }}
+            >
+              <Stack direction={{ xs: 'column', sm: 'row' }} sx={{ justifyContent: 'space-between', gap: 1 }}>
+                <Box>
+                  <Typography component="h3" sx={{ fontSize: '1.1rem', fontWeight: 700 }}>
+                    {career.companyType}
+                  </Typography>
+                  <Typography sx={{ color: 'text.secondary', fontSize: '0.95rem', mt: 0.5 }}>
+                    {career.role}
+                  </Typography>
+                </Box>
+                <Chip label={career.period} size="small" variant="outlined" />
+              </Stack>
+              <Typography sx={{ color: 'text.secondary', lineHeight: 1.8, mt: 1.5 }}>
+                {career.description}
+              </Typography>
+            </Box>
+          ))}
+        </Stack>
       </Box>
 
       <Divider />
