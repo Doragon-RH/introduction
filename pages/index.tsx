@@ -178,7 +178,7 @@ export default function Home() {
         <Box component="h3" sx={{ fontSize: '1.15rem', mt: 3, mb: 1 }}>大学・外部講座での機械学習</Box>
         <Box component="ul" sx={{ lineHeight: 2 }}>
           <li>大学・大学院: 情報分野やデータ分析を学び、大学院ではPythonを活用した機械学習の研究に取り組んでいます</li>
-          <li>Skillup AI: 機械学習に関連する外部講座を受講しています</li>
+          <li>Skillup AI: 2024/06頃〜2025/01頃に、E資格に関連する機械学習・深層学習分野の講座を約4講座受講し、すべて修了しました</li>
           <li>東京大学 松尾研究室関連の講座: 機械学習・深層学習分野の学外講座を受講しています</li>
         </Box>
         <Box component="h3" sx={{ fontSize: '1.15rem', mt: 3, mb: 1 }}>その他の技術活動</Box>
