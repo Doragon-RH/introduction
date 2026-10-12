@@ -31,12 +31,48 @@ const skillGroups = [
 ];
 
 const projects = [
-  { name: 'book_case', label: '共同開発', description: '本を管理するサービスの開発に参加。現在も継続的にコミットしています。', language: 'Dart', href: 'https://github.com/Future-Atlas/book_case' },
-  { name: 'NePP Library Manager', label: 'チーム開発', description: '図書館管理システムのバックエンド開発に参加。Rubyを使った実装経験です。', language: 'Ruby', href: 'https://github.com/nepp-tumsat/NePP_LibraryManager_Backend' },
-  { name: 'national_data_assistant', label: 'データ活用', description: 'Pythonでデータを扱うアプリケーションに取り組んでいます。', language: 'Python', href: 'https://github.com/Doragon-RH/national_data_assistant' },
-  { name: 'supporta-z_vol.6_API', label: 'ハッカソン', description: 'FastAPI、OpenCV、MySQL、Dockerを組み合わせたAPI開発。', language: 'Python', href: 'https://github.com/Doragon-RH/supporta-z_vol.6_API' },
-  { name: 'nextjs-dashboard', label: 'Web開発', description: 'Next.jsとTypeScriptでダッシュボードを実装し、UI開発を学習。', language: 'TypeScript', href: 'https://github.com/Doragon-RH/nextjs-dashboard' },
-  { name: 'contact-form', label: 'バックエンド', description: 'PHPとLaravelを使ったフォーム開発を通して、Webの基礎を深掘り。', language: 'PHP', href: 'https://github.com/Doragon-RH/contact-form' },
+  {
+    name: 'Sharemarium',
+    label: '共同開発・Webアプリ',
+    description: 'Flutter Web・Supabaseを使用した書籍レビュー／読書管理サービスの開発に参加。VercelでのWeb公開にも対応しています。',
+    language: 'Dart',
+    href: 'https://github.com/Future-Atlas/sharemarium',
+  },
+  {
+    name: 'Doragon-RH Portfolio',
+    label: 'ポートフォリオ',
+    description: 'このポートフォリオサイト。Next.js・TypeScript・MUIを使用し、活動紹介や開発相談の導線を実装しています。',
+    language: 'TypeScript',
+    href: 'https://github.com/Doragon-RH/introduction',
+  },
+  {
+    name: 'national_data_assistant',
+    label: 'AI・データ活用',
+    description: 'Pythonを中心に、フロントエンドとバックエンドを組み合わせたデータ活用アプリを開発。Docker Composeでの起動に対応しています。',
+    language: 'Python',
+    href: 'https://github.com/Doragon-RH/national_data_assistant',
+  },
+  {
+    name: 'NePP Library Manager',
+    label: 'チーム開発',
+    description: '図書管理システムのバックエンド開発に参加。Ruby on Rails・PostgreSQLを使用したWeb APIの実装経験です。',
+    language: 'Ruby',
+    href: 'https://github.com/nepp-tumsat/NePP_LibraryManager_Backend',
+  },
+  {
+    name: 'contact-form',
+    label: 'Web開発・学習',
+    description: 'PHP・Laravelの学習・開発用リポジトリ。フォーム処理やWebアプリケーションの基礎に取り組みました。',
+    language: 'PHP',
+    href: 'https://github.com/Doragon-RH/contact-form',
+  },
+  {
+    name: 'supporta-z_vol.6_API',
+    label: 'ハッカソン',
+    description: 'ハッカソンでTODOアプリのバックエンドを共同開発。FastAPI・MySQL・Dockerを用い、DB構築やタスクのCRUD APIを担当しました。',
+    language: 'Python',
+    href: 'https://github.com/Doragon-RH/supporta-z_vol.6_API',
+  },
 ];
 
 export default function Home() {
@@ -111,7 +147,7 @@ export default function Home() {
 
       <Box id="projects" component="section" sx={sectionSx}>
         <Box component="h2" sx={{ fontSize: '1.6rem' }}>What I've built</Box>
-        <Box component="p" sx={{ color: 'text.secondary', lineHeight: 1.8 }}>GitHubで公開・参加しているプロジェクトから、代表的なものを紹介します。</Box>
+        <Box component="p" sx={{ color: 'text.secondary', lineHeight: 1.8 }}>公開されているGitHubリポジトリを確認し、現在の制作物とこれまでの開発・共同開発経験から代表的なものを紹介します。</Box>
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' }, gap: 2, mt: 3 }}>
           {projects.map((project) => (
             <Box key={project.name} sx={{ border: '1px solid', borderColor: 'divider', borderRadius: 2, p: 2.5, bgcolor: 'background.paper', transition: 'transform 180ms ease, box-shadow 180ms ease', '&:hover': { transform: 'translateY(-3px)', boxShadow: 3 } }}>
@@ -129,16 +165,27 @@ export default function Home() {
 
       <Box id="activity" component="section" sx={sectionSx}>
         <Box component="h2" sx={{ fontSize: '1.6rem' }}>Experience</Box>
-        <Box component="p" sx={{ color: 'text.secondary', lineHeight: 1.8 }}>公開情報から確認できる開発・技術活動です。</Box>
+        <Box component="p" sx={{ color: 'text.secondary', lineHeight: 1.8 }}>
+          大学・大学院での学習、学外講座、長期インターンや開発活動をまとめています。
+          インターン先の企業名や非公開情報は掲載していません。
+        </Box>
+        <Box component="h3" sx={{ fontSize: '1.15rem', mt: 3, mb: 1 }}>長期インターン・実務経験</Box>
         <Box component="ul" sx={{ lineHeight: 2 }}>
-          <li>2022/04 - 2023/02: paizaでアルゴリズム、HTML、CSSを学習。スキルチェックBランク取得</li>
-          <li>2023/04 - 2023/08: サポーターズ主催ハッカソンに参加（FastAPI、OpenCV、MySQL、Docker）</li>
-          <li>2023/07 - 2023/11: 基本情報技術者試験に合格</li>
-          <li>2023/10 - 2023/12: Go言語を学習</li>
-          <li>2023/12 - 現在: AtCoderコンテストに参加</li>
-          <li>2024/08 - 2026/08: Web系企業で有償長期インターン（フルスタックエンジニア）</li>
-          <li>2024/12 - 2025/12: IT・教育系企業で長期インターン。プログラミングスクールのQA対応、社内業務効率化に従事</li>
+          <li>2024/08 - 2026/08: Web系企業で有償長期インターン（フルスタックエンジニア）。Webアプリの機能開発・改修を担当</li>
+          <li>2024/12 - 2025/12: IT・教育系企業で長期インターン。プログラミングスクールのQA対応や社内業務の効率化・自動化に従事</li>
           <li>2026/08 - 現在: AI・データ分析系企業でデータサイエンティストとしてインターン</li>
+        </Box>
+        <Box component="h3" sx={{ fontSize: '1.15rem', mt: 3, mb: 1 }}>大学・外部講座での機械学習</Box>
+        <Box component="ul" sx={{ lineHeight: 2 }}>
+          <li>大学・大学院: 情報分野やデータ分析を学び、大学院ではPythonを活用した機械学習の研究に取り組んでいます</li>
+          <li>Skillup AI: 機械学習に関連する外部講座を受講しています</li>
+          <li>東京大学 松尾研究室関連の講座: 機械学習・深層学習分野の学外講座を受講しています</li>
+        </Box>
+        <Box component="h3" sx={{ fontSize: '1.15rem', mt: 3, mb: 1 }}>その他の技術活動</Box>
+        <Box component="ul" sx={{ lineHeight: 2 }}>
+          <li>paiza等を通じてプログラミング・アルゴリズムを学習（スキルチェックBランク取得）</li>
+          <li>2023年: サポーターズ主催ハッカソンに参加し、FastAPI・MySQL・Dockerを使用した開発を経験</li>
+          <li>基本情報技術者試験に合格。Go言語の学習やAtCoderへの参加なども経験</li>
         </Box>
         <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1.5 }}>
           <Chip icon={<GroupsIcon />} label="ハッカソン参加" />
