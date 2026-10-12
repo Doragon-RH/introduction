@@ -10,7 +10,7 @@ Doragon-RHの個人ポートフォリオサイトです。大学院での学習�
 
 ## 主なページ
 
-- `/` - Home / About / Skills / Projects / Research / Experience（長期インターン・大学/外部講座での機械学習学習） / Financial Planning / Contact
+- `/` - Home / About / Skills / Projects / Research / Experience（長期インターン・大学/外部講座での機械学習） / Financial Planning / Contact
 - `/financial-planning` - FP資格の現在地、相談開始後に予定している内容、相談形式、扱う範囲
 - `/work` - 技術経験、対応領域、利用技術の詳細
 - `/development` - 開発案件の受付ページ。初回相談は無料、具体的な解決策の設計・提案と開発は有料
