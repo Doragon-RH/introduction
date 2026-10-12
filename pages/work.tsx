@@ -11,6 +11,31 @@ import CodeOutlinedIcon from '@mui/icons-material/CodeOutlined';
 import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
 import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
 import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
+import { skillExperienceGroups } from '../data/skill-experience';
+
+const careerHistory = [
+  {
+    companyType: 'Web系企業',
+    role: '有償長期インターン / フルスタックエンジニア',
+    period: '2024/08 - 2026/08',
+    description:
+      'フルスタックエンジニアとして、Webアプリケーション開発に従事しました。フロントエンド・バックエンドの双方を担当し、継続的な機能開発・改修を経験しました。',
+  },
+  {
+    companyType: 'IT・教育系企業',
+    role: '長期インターン',
+    period: '2024/12 - 2025/12',
+    description:
+      'プログラミングスクールのQA対応と、社内業務の効率化・自動化を中心に担当しました。受講者対応に加え、Google Apps ScriptやPythonなどを用いた定型業務の改善に取り組みました。',
+  },
+  {
+    companyType: 'AI・データ分析系企業',
+    role: 'インターン / データサイエンティスト',
+    period: '2026/08 - 現在',
+    description:
+      'データサイエンティストとしてインターンに従事しています。業務内容は、公開可能な範囲に限定して技術経験として整理しています。',
+  },
+];
 
 const technicalExperiences = [
   {
@@ -40,6 +65,13 @@ const technicalExperiences = [
     description:
       '画像異常検知をテーマに、VAEの学習・推論・評価まで一連の実装を経験しています。PyTorch / PyTorch Lightningを用いた学習処理、チェックポイントからのテスト、再構成誤差を用いた異常判定、Accuracy・Precision・Recall・F1・Confusion Matrixによる評価、元画像・再構成画像・差分・ヒートマップの可視化まで取り組んでいます。',
     skills: ['Python', 'PyTorch', 'PyTorch Lightning', 'TensorBoard', 'Docker', 'Model Evaluation'],
+  },
+  {
+    title: 'Flutter Web / Team Development',
+    period: '共同開発',
+    description:
+      'Flutter WebとSupabaseを用いた書籍レビュー・読書管理サービスの共同開発に参加しています。公開投稿一覧への導線改善などのUI開発に加え、Web公開やCI/CDに関連する継続的な機能改善にも取り組んでいます。',
+    skills: ['Flutter', 'Dart', 'Supabase', 'Vercel', 'CI/CD'],
   },
 ];
 
@@ -99,6 +131,40 @@ export default function Work() {
           初回相談では、現在の課題や目的を伺い、対応可能性を確認するところまで無料で行います。
           具体的な調査・解決策の設計や提案、開発・実装は有料です。料金は工数や難易度などをもとに案件ごとにお見積もりします。
         </Typography>
+      </Box>
+
+      <Divider />
+
+      <Box id="career-history" component="section" sx={{ py: 4 }}>
+        <Typography component="h2" sx={{ fontSize: '1.6rem', fontWeight: 700, mb: 1 }}>
+          Career / Internship History
+        </Typography>
+        <Typography sx={{ color: 'text.secondary', lineHeight: 1.8, mb: 3 }}>
+          これまでの長期インターン・就業経験を、企業名や非公開情報を出さず、在籍期間・役割・担当内容が分かる形でまとめています。
+        </Typography>
+        <Stack spacing={2}>
+          {careerHistory.map((career) => (
+            <Box
+              key={`${career.companyType}-${career.period}`}
+              sx={{ p: 2.5, border: '1px solid', borderColor: 'divider', borderRadius: 2, bgcolor: 'background.paper' }}
+            >
+              <Stack direction={{ xs: 'column', sm: 'row' }} sx={{ justifyContent: 'space-between', gap: 1 }}>
+                <Box>
+                  <Typography component="h3" sx={{ fontSize: '1.1rem', fontWeight: 700 }}>
+                    {career.companyType}
+                  </Typography>
+                  <Typography sx={{ color: 'text.secondary', fontSize: '0.95rem', mt: 0.5 }}>
+                    {career.role}
+                  </Typography>
+                </Box>
+                <Chip label={career.period} size="small" variant="outlined" />
+              </Stack>
+              <Typography sx={{ color: 'text.secondary', lineHeight: 1.8, mt: 1.5 }}>
+                {career.description}
+              </Typography>
+            </Box>
+          ))}
+        </Stack>
       </Box>
 
       <Divider />
@@ -176,16 +242,28 @@ export default function Work() {
 
       <Box component="section" sx={{ py: 4 }}>
         <Typography component="h2" sx={{ fontSize: '1.6rem', fontWeight: 700, mb: 1.5 }}>
-          技術スタック
+          技術スタック・経験レベル
         </Typography>
-        <Typography sx={{ color: 'text.secondary', lineHeight: 1.8, mb: 2 }}>
-          主に以下の技術を利用しています。案件内容に応じて、対応可能性を確認したうえで進めます。
+        <Typography sx={{ color: 'text.secondary', lineHeight: 1.8, mb: 3 }}>
+          実務、個人・チーム開発、学習経験を区別しています。案件内容に応じて、対応可能性を確認したうえで進めます。
         </Typography>
-        <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1 }}>
-          {['Python', 'TypeScript', 'JavaScript', 'React', 'Next.js', 'MUI', 'Tailwind CSS', 'Ruby on Rails', 'FastAPI', 'Laravel', 'MySQL', 'Redis', 'REST API', 'PyTorch', 'scikit-learn', 'OpenCV', 'Google Apps Script', 'Google Sheets', 'Slack', 'AWS', 'GCP', 'Docker', 'GitHub'].map((skill) => (
-            <Chip key={skill} label={skill} />
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 2 }}>
+          {skillExperienceGroups.map((group) => (
+            <Box key={group.title} sx={{ p: 2.5, border: '1px solid', borderColor: 'divider', borderRadius: 2, bgcolor: 'background.paper' }}>
+              <Typography component="h3" sx={{ fontSize: '1.1rem', fontWeight: 700, mb: 0.5 }}>
+                {group.title}
+              </Typography>
+              <Typography sx={{ fontSize: '0.9rem', color: 'text.secondary', lineHeight: 1.75, mb: 2 }}>
+                {group.description}
+              </Typography>
+              <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 0.75 }}>
+                {group.skills.map((skill) => (
+                  <Chip key={skill} label={skill} size="small" variant="outlined" />
+                ))}
+              </Stack>
+            </Box>
           ))}
-        </Stack>
+        </Box>
       </Box>
 
       <Box id="contact-form" component="section" sx={{ py: 4 }}>
