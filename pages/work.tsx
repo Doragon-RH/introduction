@@ -11,6 +11,7 @@ import CodeOutlinedIcon from '@mui/icons-material/CodeOutlined';
 import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
 import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
 import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
+import { skillExperienceGroups } from '../data/skill-experience';
 
 const careerHistory = [
   {
@@ -64,6 +65,13 @@ const technicalExperiences = [
     description:
       '画像異常検知をテーマに、VAEの学習・推論・評価まで一連の実装を経験しています。PyTorch / PyTorch Lightningを用いた学習処理、チェックポイントからのテスト、再構成誤差を用いた異常判定、Accuracy・Precision・Recall・F1・Confusion Matrixによる評価、元画像・再構成画像・差分・ヒートマップの可視化まで取り組んでいます。',
     skills: ['Python', 'PyTorch', 'PyTorch Lightning', 'TensorBoard', 'Docker', 'Model Evaluation'],
+  },
+  {
+    title: 'Flutter Web / Team Development',
+    period: '共同開発',
+    description:
+      'Flutter WebとSupabaseを用いた書籍レビュー・読書管理サービスの共同開発に参加しています。公開投稿一覧への導線改善などのUI開発に加え、Web公開やCI/CDに関連する継続的な機能改善にも取り組んでいます。',
+    skills: ['Flutter', 'Dart', 'Supabase', 'Vercel', 'CI/CD'],
   },
 ];
 
@@ -234,16 +242,28 @@ export default function Work() {
 
       <Box component="section" sx={{ py: 4 }}>
         <Typography component="h2" sx={{ fontSize: '1.6rem', fontWeight: 700, mb: 1.5 }}>
-          技術スタック
+          技術スタック・経験レベル
         </Typography>
-        <Typography sx={{ color: 'text.secondary', lineHeight: 1.8, mb: 2 }}>
-          主に以下の技術を利用しています。案件内容に応じて、対応可能性を確認したうえで進めます。
+        <Typography sx={{ color: 'text.secondary', lineHeight: 1.8, mb: 3 }}>
+          実務、個人・チーム開発、学習経験を区別しています。案件内容に応じて、対応可能性を確認したうえで進めます。
         </Typography>
-        <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1 }}>
-          {['Python', 'TypeScript', 'JavaScript', 'React', 'Next.js', 'MUI', 'Tailwind CSS', 'Ruby on Rails', 'FastAPI', 'Laravel', 'MySQL', 'Redis', 'REST API', 'PyTorch', 'scikit-learn', 'OpenCV', 'Google Apps Script', 'Google Sheets', 'Slack', 'AWS', 'GCP', 'Docker', 'GitHub'].map((skill) => (
-            <Chip key={skill} label={skill} />
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 2 }}>
+          {skillExperienceGroups.map((group) => (
+            <Box key={group.title} sx={{ p: 2.5, border: '1px solid', borderColor: 'divider', borderRadius: 2, bgcolor: 'background.paper' }}>
+              <Typography component="h3" sx={{ fontSize: '1.1rem', fontWeight: 700, mb: 0.5 }}>
+                {group.title}
+              </Typography>
+              <Typography sx={{ fontSize: '0.9rem', color: 'text.secondary', lineHeight: 1.75, mb: 2 }}>
+                {group.description}
+              </Typography>
+              <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 0.75 }}>
+                {group.skills.map((skill) => (
+                  <Chip key={skill} label={skill} size="small" variant="outlined" />
+                ))}
+              </Stack>
+            </Box>
           ))}
-        </Stack>
+        </Box>
       </Box>
 
       <Box id="contact-form" component="section" sx={{ py: 4 }}>
