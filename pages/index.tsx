@@ -10,6 +10,7 @@ import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import CodeIcon from '@mui/icons-material/Code';
 import GroupsIcon from '@mui/icons-material/Groups';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import { skillExperienceGroups } from '../data/skill-experience';
 
 const sectionSx = {
   width: '100%',
@@ -20,21 +21,11 @@ const sectionSx = {
 
 const linkSx = { color: 'primary.main', fontWeight: 600 };
 
-const skillGroups = [
-  { title: 'Programming', skills: ['Python', 'TypeScript', 'JavaScript', 'PHP', 'Ruby', 'Go'] },
-  { title: 'Frontend', skills: ['React', 'Next.js', 'MUI', 'Tailwind CSS', 'HTML', 'CSS'] },
-  { title: 'AI / Machine Learning', skills: ['Machine Learning', 'PyTorch', 'PyTorch Lightning', 'scikit-learn', 'OpenCV'] },
-  { title: 'Backend / Data', skills: ['Ruby on Rails', 'FastAPI', 'Laravel', 'MySQL', 'Redis', 'REST API'] },
-  { title: 'Automation', skills: ['Google Apps Script', 'Google Sheets', 'Slack Integration', 'Excel Automation'] },
-  { title: 'Cloud / Infrastructure', skills: ['AWS', 'GCP', 'Docker'] },
-  { title: 'Tools', skills: ['Git', 'GitHub', 'Poetry'] },
-];
-
 const projects = [
   {
     name: 'Sharemarium',
     label: '共同開発・Webアプリ',
-    description: 'Flutter Web・Supabaseを使用した書籍レビュー／読書管理サービスの開発に参加。VercelでのWeb公開にも対応しています。',
+    description: 'Flutter Web・Supabaseを用いた書籍レビュー・読書管理サービスを共同開発。投稿一覧の導線改善や、Web公開・CI/CDなどの継続的な機能改善にも参加しています。',
     language: 'Dart',
     href: 'https://github.com/Future-Atlas/sharemarium',
   },
@@ -104,7 +95,7 @@ export default function Home() {
           情報系・機械学習への関心を軸に、大学・大学院での学習と個人開発を続けています。Webアプリケーションの制作、ハッカソン、チーム開発を通じて、アイデアを動くソフトウェアに変える経験を積んできました。
         </Box>
         <Box component="p" sx={{ lineHeight: 1.9 }}>
-          大学・大学院での具体的な専攻や研究テーマは、公開できる範囲を整理したうえで追記する予定です。
+          大学院では機械学習を用いた研究に取り組んでいます。未発表の研究内容を守るため、研究テーマはResearch欄で公開可能な概要のみ紹介しています。
         </Box>
         <Box component="p" sx={{ color: 'text.secondary', lineHeight: 1.8, mb: 0 }}>
           興味: 運動、知識の蓄積、ゲーム、最適化、プログラミング、アニメ、漫画<br />
@@ -114,13 +105,17 @@ export default function Home() {
 
       <Box id="skills" component="section" sx={sectionSx}>
         <Box component="h2" sx={{ fontSize: '1.6rem' }}>Skills</Box>
-        <Box component="p" sx={{ color: 'text.secondary', lineHeight: 1.8 }}>GitHub上の公開コードで確認できる技術と、これまでの学習内容をカテゴリ別に整理しています。</Box>
+        <Box component="p" sx={{ color: 'text.secondary', lineHeight: 1.8 }}>
+          使用経験に応じて、実務経験・個人／チーム開発・学習経験の3つに分類しています。
+          技術ごとの経験レベルを区別して掲載しています。
+        </Box>
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' }, gap: 2, mt: 3 }}>
-          {skillGroups.map((group) => (
-            <Box key={group.title} sx={{ borderLeft: '3px solid', borderColor: 'primary.main', pl: 2 }}>
-              <Box component="h3" sx={{ fontSize: '1rem', mt: 0, mb: 1 }}>{group.title}</Box>
+          {skillExperienceGroups.map((group) => (
+            <Box key={group.title} sx={{ p: 2.5, border: '1px solid', borderColor: 'divider', borderRadius: 2, bgcolor: 'background.paper' }}>
+              <Box component="h3" sx={{ fontSize: '1.1rem', fontWeight: 700, mt: 0, mb: 0.5 }}>{group.title}</Box>
+              <Box component="p" sx={{ color: 'text.secondary', fontSize: '0.9rem', lineHeight: 1.7, mt: 0, mb: 2 }}>{group.description}</Box>
               <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 0.75 }}>
-                {group.skills.map((skill) => <Chip key={skill} label={skill} size="small" />)}
+                {group.skills.map((skill) => <Chip key={skill} label={skill} size="small" variant="outlined" />)}
               </Stack>
             </Box>
           ))}
@@ -177,7 +172,7 @@ export default function Home() {
         </Box>
         <Box component="h3" sx={{ fontSize: '1.15rem', mt: 3, mb: 1 }}>大学・外部講座での機械学習</Box>
         <Box component="ul" sx={{ lineHeight: 2 }}>
-          <li>大学・大学院: 情報分野やデータ分析を学び、大学院ではPythonを活用した機械学習の研究に取り組んでいます</li>
+          <li>大学・大学院: 情報分野やデータ分析・機械学習を学び、大学院では周辺環境予測に関する研究に取り組んでいます（概要はResearch欄に掲載）</li>
           <li>Skillup AI: 2024/06頃〜2025/01頃に、E資格に関連する機械学習・深層学習分野の講座を約4講座受講し、すべて修了しました</li>
           <li>東京大学 松尾研究室関連の講座: 機械学習・深層学習分野の学外講座を受講しています</li>
         </Box>
@@ -199,12 +194,19 @@ export default function Home() {
 
       <Box id="research" component="section" sx={sectionSx}>
         <Box component="h2" sx={{ fontSize: '1.6rem' }}>Research</Box>
-        <Box component="p" sx={{ lineHeight: 1.9 }}>大学院での研究を紹介するためのセクションです。未公開の研究内容は掲載せず、公開できる範囲が決まり次第更新します。</Box>
-        <Box sx={{ border: '1px dashed', borderColor: 'divider', p: 2, color: 'text.secondary' }}>
-          <Box component="p" sx={{ mt: 0 }}>研究分野: TODO</Box>
-          <Box component="p">使用技術: TODO</Box>
-          <Box component="p">研究テーマの概要: TODO</Box>
-          <Box component="p" sx={{ mb: 0 }}>今後の方向性: TODO</Box>
+        <Box sx={{ border: '1px solid', borderColor: 'divider', borderRadius: 2, p: 2.5, bgcolor: 'background.paper' }}>
+          <Stack direction={{ xs: 'column', sm: 'row' }} sx={{ justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'center' }, gap: 1.5, mb: 2 }}>
+            <Box component="h3" sx={{ fontSize: '1.1rem', fontWeight: 700, m: 0 }}>
+              海馬型ニューラルネットワークを用いた周辺環境予測
+            </Box>
+            <Chip label="研究進行中" size="small" variant="outlined" />
+          </Stack>
+          <Box component="p" sx={{ lineHeight: 1.9, mt: 0, mb: 1.5 }}>
+            大学院で、海馬型ニューラルネットワークを用いて周辺環境を予測する研究に取り組んでいます。
+          </Box>
+          <Box component="p" sx={{ color: 'text.secondary', lineHeight: 1.8, mb: 0 }}>
+            研究は現在進行中のため、具体的なモデル構成、手法、実験条件、評価結果などは公開していません。
+          </Box>
         </Box>
       </Box>
 
