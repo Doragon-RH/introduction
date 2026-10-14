@@ -35,6 +35,13 @@ const careerHistory = [
     description:
       'データサイエンティストとしてインターンに従事しています。業務内容は、公開可能な範囲に限定して技術経験として整理しています。',
   },
+  {
+    companyType: '海事・輸送分野の研究機関',
+    role: 'インターン / Web開発・研究',
+    period: '2026/08 - 現在',
+    description:
+      'Webアプリケーション開発と輸送に関する研究を担当しています。具体的な研究手法・成果や非公開情報は掲載していません。',
+  },
 ];
 
 const technicalExperiences = [
